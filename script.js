@@ -5,6 +5,7 @@ let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
 let turn0 = true;
+let count = 0;
 
 const winPattern=[
     [0,1,2],[0,3,6],[0,4,8],
@@ -20,7 +21,7 @@ const resetGame = () => {
 
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
-        console.log("box clicked!");
+        count++;
         if(turn0){
             box.innerText="O";
             turn0=false;
@@ -64,6 +65,11 @@ const checkWinners = () => {
             if(pos1 === pos2 && pos2 === pos3){
                 showWinner(pos1);
             }
+        }
+        if(count === 9){
+            msg.innerText = "Match Drawn";
+            msgContainer.classList.remove("hide");
+            disableBox();
         }
     }
 }
