@@ -24,10 +24,12 @@ boxes.forEach((box) => {
         count++;
         if(turn0){
             box.innerText="O";
+            box.classList.add("O");
             turn0=false;
         }
         else{
             box.innerText="X";
+            box.classList.add("X");
             turn0=true;
         }
         box.disabled = true;

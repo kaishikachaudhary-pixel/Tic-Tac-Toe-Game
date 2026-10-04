@@ -28,7 +28,6 @@ body{
     border-radius: 1rem;
     border:none;
     font-size: 8vmin;
-    color:#b0413e;
     background-color:#ffffc7;
 }
 #resetBtn{
@@ -59,4 +58,10 @@ body{
 
 .hide{
     display:none;
+}
+.X{
+    color:#7c1410;
+}
+.O{
+    color:#c8a31c;
 }
